@@ -27,8 +27,8 @@ FROM eclipse-temurin:21-jdk-alpine
 # Set working directory
 WORKDIR /app
 
-# Copy the built jar from the build stage
-COPY --from=build /app/target/demo-0.0.1-SNAPSHOT.jar app.jar
+# Copy the built jar from the build stage (correct JAR name)
+COPY --from=build /app/target/renderDemo-0.0.1-SNAPSHOT.jar app.jar
 
 # Expose port 8080
 EXPOSE 8080
